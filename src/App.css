@@ -225,7 +225,10 @@
   background: #ff7d1a;
   border: none;
   border-radius: 5px;
+  -webkit-box-shadow: 0px 10px 40px #ff7d1a;
+          box-shadow: 0px 10px 40px #ff7d1a;
   color: white;
   white-space: nowrap;
+  cursor: pointer;
 }
 /*# sourceMappingURL=App.css.map */
