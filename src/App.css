@@ -21,11 +21,17 @@
       grid-template-columns: 1fr 1fr;
 }
 
+.App .product-page-wrapper .product-page .images {
+  max-width: 100%;
+  padding: 2rem;
+}
+
 .App .product-page-wrapper .product-page .images .main-image img {
   -o-object-fit: cover;
      object-fit: cover;
-  max-width: 400px;
-  max-height: 400px;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 7px;
 }
 
 .App .product-page-wrapper .product-page .images .small-images {
@@ -33,17 +39,19 @@
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
   max-width: 100%;
 }
 
 .App .product-page-wrapper .product-page .images .small-images .single-image {
-  padding: 20px;
+  padding: 20px 0px;
 }
 
 .App .product-page-wrapper .product-page .images .small-images .single-image img {
   -o-object-fit: cover;
      object-fit: cover;
-  max-width: 120px;
-  max-height: 120px;
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 7px;
 }
 /*# sourceMappingURL=App.css.map */
