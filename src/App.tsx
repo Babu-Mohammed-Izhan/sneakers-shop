@@ -1,24 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React from "react";
+import "./App.css";
 
 function App() {
+  const [image, setImage] = React.useState(0);
+
+  const images = ["", "", "", ""];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <nav className="navbar">
+        <div className="logo">sneakers</div>
+        <div className="links">
+          <a href="#">Collections</a>
+          <a href="#">Men</a>
+          <a href="#">Women</a>
+          <a href="#"> About</a>
+          <a href="#">Contact</a>
+        </div>
+      </nav>
+      <section className="product-page-wrapper">
+        <div className="product-page">
+          <div className="images">
+            <div className="main-image"></div>
+            <div className="small-images">
+              {images.map((m) => {
+                return (
+                  <div className="single-image">
+                    <img src={m} alt="small-images" />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+          <div className="details"></div>
+        </div>
+      </section>
     </div>
   );
 }
