@@ -1,0 +1,42 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.App {
+  max-height: 100vh;
+  .navbar {
+  }
+
+  .product-page-wrapper {
+    max-width: 80%;
+    margin: auto;
+    .product-page {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .images {
+        .main-image {
+          img {
+            object-fit: cover;
+            max-width: 400px;
+            max-height: 400px;
+          }
+        }
+        .small-images {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          max-width: 100%;
+          .single-image {
+            padding: 20px;
+            img {
+              object-fit: cover;
+              max-width: 120px;
+              max-height: 120px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

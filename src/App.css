@@ -1,38 +1,49 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+  max-height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App .product-page-wrapper {
+  max-width: 80%;
+  margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App .product-page-wrapper .product-page {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App .product-page-wrapper .product-page .images .main-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 400px;
+  max-height: 400px;
 }
 
-.App-link {
-  color: #61dafb;
+.App .product-page-wrapper .product-page .images .small-images {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  max-width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App .product-page-wrapper .product-page .images .small-images .single-image {
+  padding: 20px;
 }
+
+.App .product-page-wrapper .product-page .images .small-images .single-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 120px;
+  max-height: 120px;
+}
+/*# sourceMappingURL=App.css.map */
