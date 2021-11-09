@@ -9,6 +9,7 @@ import mainimage1 from "./images/image-product-1.jpg";
 import mainimage2 from "./images/image-product-2.jpg";
 import mainimage3 from "./images/image-product-3.jpg";
 import mainimage4 from "./images/image-product-4.jpg";
+import profile from "./images/image-avatar.png";
 
 function App() {
   const [image, setImage] = React.useState(0);
@@ -29,7 +30,12 @@ function App() {
             <a href="#"> About</a>
             <a href="#">Contact</a>
           </div>
-          <div className="right-side"></div>
+        </div>
+        <div className="right-side">
+          <div className="cart"></div>
+          <div className="profile">
+            <img src={profile} alt="profile" className="profile" />
+          </div>
         </div>
       </nav>
       <section className="product-page-wrapper">
