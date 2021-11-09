@@ -12,6 +12,8 @@ import mainimage4 from "./images/image-product-4.jpg";
 import profile from "./images/image-avatar.png";
 import cart from "./images/icon-cart.svg";
 import menu from "./images/icon-menu.svg";
+import increment from "./images/icon-next.svg";
+import decrement from "./images/icon-previous.svg";
 
 function App() {
   const [image, setImage] = React.useState(0);
@@ -20,6 +22,9 @@ function App() {
   const images = [image1, image2, image3, image4];
   const mainimages = [mainimage1, mainimage2, mainimage3, mainimage4];
 
+  const handleImageDec = () => {};
+
+  const handleImageInc = () => {};
   return (
     <div className="App">
       <nav className="navbar">
@@ -49,7 +54,15 @@ function App() {
         <div className="product-page">
           <div className="images">
             <div className="main-image">
-              <img src={mainimages[image]} alt="main-sneaker" />
+              <button className="decrement" onClick={() => handleImageDec()}>
+                <img src={decrement} alt="dec" />
+              </button>
+              <div className="image">
+                <img src={mainimages[image]} alt="main-sneaker" />
+              </div>
+              <button className="increment" onClick={() => handleImageInc()}>
+                <img src={increment} alt="inc" />
+              </button>
             </div>
             <div className="small-images">
               {images.map((m, idx) => {
