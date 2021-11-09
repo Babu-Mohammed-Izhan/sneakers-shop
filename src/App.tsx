@@ -22,9 +22,19 @@ function App() {
   const images = [image1, image2, image3, image4];
   const mainimages = [mainimage1, mainimage2, mainimage3, mainimage4];
 
-  const handleImageDec = () => {};
+  const handleImageDec = () => {
+    if (image <= 0) {
+    } else {
+      setImage(image - 1);
+    }
+  };
 
-  const handleImageInc = () => {};
+  const handleImageInc = () => {
+    if (image >= 3) {
+    } else {
+      setImage(image + 1);
+    }
+  };
   return (
     <div className="App">
       <nav className="navbar">
@@ -54,13 +64,19 @@ function App() {
         <div className="product-page">
           <div className="images">
             <div className="main-image">
-              <button className="decrement" onClick={() => handleImageDec()}>
+              <button
+                className="button decrement"
+                onClick={() => handleImageDec()}
+              >
                 <img src={decrement} alt="dec" />
               </button>
               <div className="image">
                 <img src={mainimages[image]} alt="main-sneaker" />
               </div>
-              <button className="increment" onClick={() => handleImageInc()}>
+              <button
+                className="button increment"
+                onClick={() => handleImageInc()}
+              >
                 <img src={increment} alt="inc" />
               </button>
             </div>
