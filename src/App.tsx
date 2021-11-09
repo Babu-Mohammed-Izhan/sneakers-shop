@@ -10,6 +10,8 @@ import mainimage2 from "./images/image-product-2.jpg";
 import mainimage3 from "./images/image-product-3.jpg";
 import mainimage4 from "./images/image-product-4.jpg";
 import profile from "./images/image-avatar.png";
+import cart from "./images/icon-cart.svg";
+import menu from "./images/icon-menu.svg";
 
 function App() {
   const [image, setImage] = React.useState(0);
@@ -22,6 +24,9 @@ function App() {
     <div className="App">
       <nav className="navbar">
         <div className="left-side">
+          <div className="hamburger">
+            <img src={menu} alt="menu" />
+          </div>
           <div className="logo">sneakers</div>
           <div className="links">
             <a href="#">Collections</a>
@@ -32,7 +37,9 @@ function App() {
           </div>
         </div>
         <div className="right-side">
-          <div className="cart"></div>
+          <div className="cart">
+            <img src={cart} alt="cart" />
+          </div>
           <div className="profile">
             <img src={profile} alt="profile" className="profile" />
           </div>
