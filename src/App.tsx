@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
+import { slide as Menu } from "react-burger-menu";
 import "./App.css";
 import image1 from "./images/image-product-1-thumbnail.jpg";
 import image2 from "./images/image-product-2-thumbnail.jpg";
@@ -18,6 +19,7 @@ import decrement from "./images/icon-previous.svg";
 function App() {
   const [image, setImage] = React.useState(0);
   const [quantity, setQuantity] = React.useState(0);
+  const [open, setOpen] = React.useState(false);
 
   const images = [image1, image2, image3, image4];
   const mainimages = [mainimage1, mainimage2, mainimage3, mainimage4];
@@ -34,6 +36,14 @@ function App() {
     } else {
       setImage(image + 1);
     }
+  };
+
+  const handleOnOpen = () => {
+    setOpen(true);
+  };
+
+  const handleOnClose = () => {
+    setOpen(false);
   };
   return (
     <div className="App">
@@ -61,6 +71,22 @@ function App() {
         </div>
       </nav>
       <section className="product-page-wrapper">
+        <Menu right isOpen={open} onOpen={handleOnOpen} onClose={handleOnClose}>
+          <a href="#">Collections</a>
+          <a href="#" className="menu-item">
+            Men
+          </a>
+          <a href="#" className="menu-item">
+            Women
+          </a>
+          <a href="#" className="menu-item">
+            {" "}
+            About
+          </a>
+          <a href="#" className="menu-item">
+            Contact
+          </a>
+        </Menu>
         <div className="product-page">
           <div className="images">
             <div className="main-image">
